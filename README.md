@@ -22,6 +22,22 @@ PowerShell v4.0, VBRS 9.5u4, Zabbix 4.2.2
 
 ## Installation:
 1. Import a template
+2. Add regulars to Administration -> General -> Regular expressions
+
+```
+Name: VbrJsonCheck
+Expression type: Result is TRUE
+Expression: ^{"data":\s*?{[\s\S]+}$
+
+Name: Veeam
+Expression type: Result is TRUE
+Expression: Veeam.*
+
+Name: Windows Service Startup States for Discovery
+Expression type: Result is FALSE
+Expression: Veeam.*
+```
+
 2. Copy the script to a machine with VBRS, for example, in the ZabbixAgent folder
 3. Add to zabbix_agentd.conf:
 
