@@ -39,5 +39,5 @@ Expression: Veeam.*
 
 ```
 Timeout = 30
-UserParameter = vbr [*], powershell -NoProfile -ExecutionPolicy Bypass -File "c: \ Program Files \ Zabbix Agent \ zabbix_vbr.ps1" "$ 1"
+UserParameter = vbr [*], powershell -NoProfile -ExecutionPolicy Bypass -File "c: \ Program Files \ Zabbix Agent \ zabbix_vbr.ps1" "$1"
 ```
