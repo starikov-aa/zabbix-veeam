@@ -126,7 +126,6 @@ function ResultJobToZabbix {
                     if (@('result', 'lastresult', 'laststate', 'status') -match $PropertiesFieldName[$i]) {
                         $prop_val = $prop_val | VeeamStatusReplace
                     }
-
                     $out[[string]$item.$KeyFieldName] += @{
                         $PropertiesFieldName[$i].ToUpper() = $prop_val
                     }
@@ -212,8 +211,8 @@ function GetJobsResults {
                     $Status = ($Tasks | Where-Object { $_.Name -eq $VmName -and $_.JobSess.JobId -eq $JobId } | Select-Object Status).Status
                     if (-Not $Status) {
                         $Status = 1
-                    } 
-                    $out += @{ "JOBID" = $_.Id; "RESULT" = $Status }
+                    }
+                    $out += @{ "JOBID" = "$($JobId)_$($_.Id)"; "RESULT" = $Status}
                 }
             }
         }
@@ -269,9 +268,10 @@ switch ($ITEM) {
         $query = @()
         $ALL_JOB_INFO | Where-Object JobType -eq "Backup" | ForEach-Object {
             $JobName = $_.Name
+            $JobId = $_.Id
             $_ | GetAllVmInJob | ForEach-Object { 
                 $query += @{ "JOBNAME" = $JobName;
-                    "ID"               = $_.ID;
+                    "ID"               = "$($JobId)_$($_.ID)";
                     "NAME"             = $_.Name
                 }
             }
@@ -283,9 +283,10 @@ switch ($ITEM) {
         $query = @()
         $ALL_JOB_INFO | Where-Object JobType -like "BackupSync" | ForEach-Object {
             $JobName = $_.Name
+            $JobId = $_.Id
             $_ | GetAllVmInJob | ForEach-Object { 
                 $query += @{ "JOBNAME" = $JobName;
-                    "ID"               = $_.ID;
+                    "ID"               = "$($JobId)_$($_.ID)";
                     "NAME"             = $_.Name
                 }
             }
