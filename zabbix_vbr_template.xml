@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>4.2</version>
-    <date>2019-12-07T15:27:09Z</date>
+    <date>2019-12-09T07:51:24Z</date>
     <groups>
         <group>
             <name>Templates</name>
@@ -937,7 +937,7 @@
                             <dependencies>
                                 <dependency>
                                     <name>Non-correct JSON data is received in ResultBackupPerVM</name>
-                                    <expression>{Template Veeam Backup And Replication:vbr[ResultBackupPerVM].iregexp(@VbrJsonCheck,1800)}=0</expression>
+                                    <expression>{Template Veeam Backup And Replication:vbr[ResultBackupPerVM].iregexp(@VbrJsonCheck,1800)}=1</expression>
                                     <recovery_expression/>
                                 </dependency>
                             </dependencies>
@@ -1148,7 +1148,7 @@
                             <dependencies>
                                 <dependency>
                                     <name>Non-correct JSON data is received in ResultBackup</name>
-                                    <expression>{Template Veeam Backup And Replication:vbr[ResultBackup].iregexp(@VbrJsonCheck,1800)}=0</expression>
+                                    <expression>{Template Veeam Backup And Replication:vbr[ResultBackup].iregexp(@VbrJsonCheck,1800)}=1</expression>
                                     <recovery_expression/>
                                 </dependency>
                             </dependencies>
@@ -1570,7 +1570,7 @@
                             <dependencies>
                                 <dependency>
                                     <name>Non-correct JSON data is received in ResultBackupSync</name>
-                                    <expression>{Template Veeam Backup And Replication:vbr[ResultBackupSync].iregexp(@VbrJsonCheck,1800)}=0</expression>
+                                    <expression>{Template Veeam Backup And Replication:vbr[ResultBackupSync].iregexp(@VbrJsonCheck,1800)}=1</expression>
                                     <recovery_expression/>
                                 </dependency>
                             </dependencies>
@@ -1789,7 +1789,7 @@
                             <dependencies>
                                 <dependency>
                                     <name>Non-correct JSON data is received in ResultMngAgentPolicy</name>
-                                    <expression>{Template Veeam Backup And Replication:vbr[ResultMngAgentPolicy].iregexp(@VbrJsonCheck,1800)}=0</expression>
+                                    <expression>{Template Veeam Backup And Replication:vbr[ResultMngAgentPolicy].iregexp(@VbrJsonCheck,1800)}=1</expression>
                                     <recovery_expression/>
                                 </dependency>
                             </dependencies>
@@ -2330,7 +2330,7 @@
                             <dependencies>
                                 <dependency>
                                     <name>Non-correct JSON data is received in ResultTapeJob</name>
-                                    <expression>{Template Veeam Backup And Replication:vbr[ResultTapeJob].iregexp(@VbrJsonCheck,1800)}=0</expression>
+                                    <expression>{Template Veeam Backup And Replication:vbr[ResultTapeJob].iregexp(@VbrJsonCheck,1800)}=1</expression>
                                     <recovery_expression/>
                                 </dependency>
                             </dependencies>
@@ -2516,7 +2516,7 @@
                             <dependencies>
                                 <dependency>
                                     <name>Non-correct JSON data is received in ResultUnMngAgentPerMashine</name>
-                                    <expression>{Template Veeam Backup And Replication:vbr[ResultUnMngAgentPerMashine].iregexp(@VbrJsonCheck,1800)}=0</expression>
+                                    <expression>{Template Veeam Backup And Replication:vbr[ResultUnMngAgentPerMashine].iregexp(@VbrJsonCheck,1800)}=1</expression>
                                     <recovery_expression/>
                                 </dependency>
                             </dependencies>
@@ -3000,7 +3000,7 @@
             <tags/>
         </trigger>
         <trigger>
-            <expression>{Template Veeam Backup And Replication:vbr[RepoInfo].iregexp(@VbrJsonCheck,1800)}=0</expression>
+            <expression>{Template Veeam Backup And Replication:vbr[RepoInfo].iregexp(@VbrJsonCheck,1800)}=1</expression>
             <recovery_mode>0</recovery_mode>
             <recovery_expression/>
             <name>Non-correct JSON data is received in RepoInfo</name>
@@ -3022,7 +3022,7 @@
             <tags/>
         </trigger>
         <trigger>
-            <expression>{Template Veeam Backup And Replication:vbr[ResultBackup].iregexp(@VbrJsonCheck,1800)}=0</expression>
+            <expression>{Template Veeam Backup And Replication:vbr[ResultBackup].iregexp(@VbrJsonCheck,1800)}=1</expression>
             <recovery_mode>0</recovery_mode>
             <recovery_expression/>
             <name>Non-correct JSON data is received in ResultBackup</name>
@@ -3044,7 +3044,7 @@
             <tags/>
         </trigger>
         <trigger>
-            <expression>{Template Veeam Backup And Replication:vbr[ResultBackupPerVM].iregexp(@VbrJsonCheck,1800)}=0</expression>
+            <expression>{Template Veeam Backup And Replication:vbr[ResultBackupPerVM].iregexp(@VbrJsonCheck,1800)}=1</expression>
             <recovery_mode>0</recovery_mode>
             <recovery_expression/>
             <name>Non-correct JSON data is received in ResultBackupPerVM</name>
@@ -3066,7 +3066,7 @@
             <tags/>
         </trigger>
         <trigger>
-            <expression>{Template Veeam Backup And Replication:vbr[ResultBackupSync].iregexp(@VbrJsonCheck,1800)}=0</expression>
+            <expression>{Template Veeam Backup And Replication:vbr[ResultBackupSync].iregexp(@VbrJsonCheck,1800)}=1</expression>
             <recovery_mode>0</recovery_mode>
             <recovery_expression/>
             <name>Non-correct JSON data is received in ResultBackupSync</name>
@@ -3088,7 +3088,7 @@
             <tags/>
         </trigger>
         <trigger>
-            <expression>{Template Veeam Backup And Replication:vbr[ResultBackupSyncPerVM].iregexp(@VbrJsonCheck,1800)}=0</expression>
+            <expression>{Template Veeam Backup And Replication:vbr[ResultBackupSyncPerVM].iregexp(@VbrJsonCheck,1800)}=1</expression>
             <recovery_mode>0</recovery_mode>
             <recovery_expression/>
             <name>Non-correct JSON data is received in ResultBackupSyncPerVM</name>
@@ -3110,7 +3110,7 @@
             <tags/>
         </trigger>
         <trigger>
-            <expression>{Template Veeam Backup And Replication:vbr[ResultMngAgentPolicy].iregexp(@VbrJsonCheck,1800)}=0</expression>
+            <expression>{Template Veeam Backup And Replication:vbr[ResultMngAgentPolicy].iregexp(@VbrJsonCheck,1800)}=1</expression>
             <recovery_mode>0</recovery_mode>
             <recovery_expression/>
             <name>Non-correct JSON data is received in ResultMngAgentPolicy</name>
@@ -3132,7 +3132,7 @@
             <tags/>
         </trigger>
         <trigger>
-            <expression>{Template Veeam Backup And Replication:vbr[ResultTapeJob].iregexp(@VbrJsonCheck,1800)}=0</expression>
+            <expression>{Template Veeam Backup And Replication:vbr[ResultTapeJob].iregexp(@VbrJsonCheck,1800)}=1</expression>
             <recovery_mode>0</recovery_mode>
             <recovery_expression/>
             <name>Non-correct JSON data is received in ResultTapeJob</name>
@@ -3154,7 +3154,7 @@
             <tags/>
         </trigger>
         <trigger>
-            <expression>{Template Veeam Backup And Replication:vbr[ResultUnMngAgentPerMashine].iregexp(@VbrJsonCheck,1800)}=0</expression>
+            <expression>{Template Veeam Backup And Replication:vbr[ResultUnMngAgentPerMashine].iregexp(@VbrJsonCheck,1800)}=1</expression>
             <recovery_mode>0</recovery_mode>
             <recovery_expression/>
             <name>Non-correct JSON data is received in ResultUnMngAgentPerMashine</name>
@@ -3176,7 +3176,7 @@
             <tags/>
         </trigger>
         <trigger>
-            <expression>{Template Veeam Backup And Replication:vbr[ResultUnMngAgentPolicy].iregexp(@VbrJsonCheck,1800)}=0</expression>
+            <expression>{Template Veeam Backup And Replication:vbr[ResultUnMngAgentPolicy].iregexp(@VbrJsonCheck,1800)}=1</expression>
             <recovery_mode>0</recovery_mode>
             <recovery_expression/>
             <name>Non-correct JSON data is received in ResultUnMngAgentPolicy</name>
