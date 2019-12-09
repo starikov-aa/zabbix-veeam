@@ -27,7 +27,7 @@ PowerShell v4.0, VBRS 9.5u4, Zabbix 4.2.2
 ```
 Name: VbrJsonCheck
 Expression type: Result is TRUE
-Expression: ^{"data":\s*?{[\s\S]+}$
+Expression: ^[^({"data":{.*}$)]
 
 Name: Veeam
 Expression type: Result is TRUE
