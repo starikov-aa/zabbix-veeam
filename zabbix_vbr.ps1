@@ -335,3 +335,5 @@ switch ($ITEM) {
     }
 
 }
+
+Disconnect-VBRServer
