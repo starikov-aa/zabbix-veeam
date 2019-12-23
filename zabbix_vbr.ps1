@@ -39,6 +39,8 @@
 # Load Veeam Module
 Add-PSSnapin -Name VeeamPSSnapIn -ErrorAction SilentlyContinue
 
+Connect-VBRServer
+
 function DiscoveryToZabbix {
     [CmdletBinding()]
     param
