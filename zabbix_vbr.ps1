@@ -3,7 +3,7 @@
 # Email: starikov_aa@mail.ru
 # GitHub: https://github.com/starikov-aa/zabbix-veeam
 # Description: Query Veeam job information
-# This script is intended for use with Zabbix >= 4
+# This script is intended for use with Zabbix >= 4.2
 #
 # USAGE:
 #
