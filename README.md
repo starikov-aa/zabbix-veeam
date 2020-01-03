@@ -3,7 +3,7 @@
 ## Requirements:
 - Veeam backup server
 - Powerhell
-- Zabbix> = 4 versions
+- Zabbix >= 4.2 versions
 
 ## It was checked for:
 PowerShell v4.0, VBRS 9.5u4, Zabbix 4.2.2
